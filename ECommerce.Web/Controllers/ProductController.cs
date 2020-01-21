@@ -12,6 +12,7 @@ namespace ECommerce.Controllers
             _getProductCommand = getProductCommand;
         }
 
+        [HttpGet]
         public ActionResult Detail(int id)
         {
             _getProductCommand.ProductId = id;
