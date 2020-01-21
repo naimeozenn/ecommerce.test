@@ -1,9 +1,7 @@
 ﻿using ECommerce.Core.Command.Base;
 using ECommerce.Core.Domain;
 using ECommerce.Core.Infrastructure.EntityFramework.Contexts;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace ECommerce.Core.Command.Products
 {
@@ -15,7 +13,7 @@ namespace ECommerce.Core.Command.Products
         public Product Execute()
         {
 
-            return null;
+           return _dbContext.Product.FirstOrDefault(x => x.Id == ProductId);            
         }
     }
 }
